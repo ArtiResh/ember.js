@@ -6,16 +6,16 @@
 */
 
 /**
-  This namespace contains all Ember methods and functions. Future versions of
-  Ember may overwrite this namespace and therefore, you should avoid adding any
-  new properties.
+ Это пространчтво имен содержит в себе все Ember методы и функции.
+ Будущие версии Ember могут перезаписывать это пространство имен,
+ и следовательно следует избегать добавления новых свойств
 
-  You can also use the shorthand `Em` instead of `Ember`.
+ Вы также можете использовать сокращенное "Em" вместо "Ember"
 
-  At the heart of Ember is Ember-Runtime, a set of core functions that provide
-  cross-platform compatibility and object property observing.  Ember-Runtime is
-  small and performance-focused so you can use it alongside other
-  cross-platform libraries such as jQuery. For more details, see
+ Ядро Ember это Ember-Runtime - это набор функции, которые предоставляют
+ кроссплатформенную совместимость и наблюдение за свойствами объекта.
+ Ember-Runtime невелика и направлена на выполнение, так что вы можете использовать
+ сторонние кроссплатворменные библиотеки, такие как jQuery. Более детально
   [Ember-Runtime](http://emberjs.com/api/modules/ember-runtime.html).
 
   @class Ember
@@ -25,21 +25,21 @@
 */
 
 if ('undefined' === typeof Ember) {
-  // Create core object. Make it act like an instance of Ember.Namespace so that
-  // objects assigned to it are given a sane string representation.
+  // Создаем объект ядра. Сделаем это действие, как экземпляр объекта Ember.Namespace, так что
+  // объекты назначенные от него будут приведены к верному сторовому состоянию
   Ember = {};
 }
 
-// Default imports, exports and lookup to the global object;
+// Дефолтный вводные и выходные данные, и наблюдаемые в глобалных объектах
 var global = mainContext || {}; // jshint ignore:line
 Ember.imports = Ember.imports || global;
 Ember.lookup  = Ember.lookup  || global;
 var emExports   = Ember.exports = Ember.exports || global;
 
-// aliases needed to keep minifiers from removing the global context
+// псевдонимы необходимые для сохнранения сокращенной формы от глобального контекста
 emExports.Em = emExports.Ember = Ember;
 
-// Make sure these are set whether Ember was already defined or not
+// Проверить есть ли в установленной переменной Ember значения по умолчанию или нет
 
 Ember.isNamespace = true;
 
